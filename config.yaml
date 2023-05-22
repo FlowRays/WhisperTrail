@@ -1,0 +1,7 @@
+database:
+  host: localhost
+  port: 3306
+  username: root
+  password: 528639
+  dbname: WhisperTrail
+hs_secret_key: lV/CBhejRZWkKgurgLtVGgPSUmDE1AS3xKZ6ScjsctA=

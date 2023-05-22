@@ -68,11 +68,11 @@ func connectDB() (*gorm.DB, error) {
 }
 
 func registerAPI(r *gin.Engine, db *model.Database) {
-	r.POST("/register", func(c *gin.Context) {
+	r.POST("/api/register", func(c *gin.Context) {
 		controller.UserRegister(c, db)
 	})
 
-	r.POST("/login", func(c *gin.Context) {
+	r.POST("/api/login", func(c *gin.Context) {
 		controller.UserLogin(c, db)
 	})
 
@@ -91,7 +91,7 @@ func registerAPI(r *gin.Engine, db *model.Database) {
 		controller.GetImage(c, db)
 	})
 
-	auth.POST("/rate", func(c *gin.Context) {
+	r.POST("/api/rate", func(c *gin.Context) {
 		controller.CreateRate(c, db)
 	})
 

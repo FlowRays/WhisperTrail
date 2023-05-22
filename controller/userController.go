@@ -38,5 +38,5 @@ func UserLogin(c *gin.Context, db *model.Database) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"message": "User logged in successfully", "token": token})
+	c.JSON(http.StatusOK, gin.H{"user": user.Username, "token": token})
 }
